@@ -36,7 +36,7 @@ function travelling() {
     urls[26] = "rawchen.com";
     urls[27] = "imzm.im";
     urls[28] = "novcu.com";
-    urls[29] = "husay.cc";
+    urls[29] = "";
     urls[30] = "synyan.cn";
     urls[31] = "mingxin.life";
     urls[32] = "onojyun.com";
