@@ -1,129 +1,30 @@
-<!--
-	forked from  https://github.com/travellings-link/travellings
--->
 
 <!DOCTYPE html>
-<html>
-
+<html >
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>去往-下一个宇宙</title>
-  <link rel="shortcut icon" href="assets/favicon.png">
-  <script src="https://w.hilllei.com/goto/assets/travelling.js"></script>
-
-
-  <style>
-    * { color: #111827; }
-    a { text-decoration: none; }
-    .blink {
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      text-align: center;
-      display: flex;
-      display: -webkit-flex;
-      align-items: center;
-      justify-content: center;
-      animation: blink 3s linear infinite;
-      -webkit-animation: blink 3s linear infinite;
-      -moz-animation: blink 3s linear infinite;
-      -ms-animation: blink 3s linear infinite;
-      -o-animation: blink 3s linear infinite;
-    }
-    @keyframes blink {
-      0%   { opacity: 0;    transform: scale(1);     }
-      40%  { opacity: 0.3;  transform: scale(1);     }
-      80%  { opacity: 1;    transform: scale(0.98);  }
-      100% { opacity: 0.2;  transform: scale(1.2);   }
-    }
-
-    @-webkit-keyframes blink {
-      0%   { opacity: 0;    transform: scale(1);     }
-      40%  { opacity: 0.3;  transform: scale(1);     }
-      80%  { opacity: 1;    transform: scale(0.98);  }
-      100% { opacity: 0.2;  transform: scale(1.2);   }
-    }
-
-    @-moz-keyframes blink {
-      0%   { opacity: 0;    transform: scale(1);     }
-      40%  { opacity: 0.3;  transform: scale(1);     }
-      80%  { opacity: 1;    transform: scale(0.98);  }
-      100% { opacity: 0.2;  transform: scale(1.2);   }
-    }
-
-    @-ms-keyframes blink {
-      0%   { opacity: 0;    transform: scale(1);     }
-      40%  { opacity: 0.3;  transform: scale(1);     }
-      80%  { opacity: 1;    transform: scale(0.98);  }
-      100% { opacity: 0.2;  transform: scale(1.2);   }
-    }
-
-    @-o-keyframes blink {
-      0%   { opacity: 0;    transform: scale(1);     }
-      40%  { opacity: 0.3;  transform: scale(1);     }
-      80%  { opacity: 1;    transform: scale(0.98);  }
-      100% { opacity: 0.2;  transform: scale(1.2);   }
-    }
-
-    .botCenter {
-      position: fixed;
-      width: 100%;
-      height: 50px;
-      bottom: 10px;
-      line-height: 20px;
-      font-size: 12px;
-      text-align: center;
-      animation: botCenter 3s linear;
-      -webkit-animation: botCenter 3s linear;
-      -moz-animation: botCenter 3s linear;
-      -ms-animation: botCenter 3s linear;
-      -o-animation: botCenter 3s linear;
-    }
-
-    @keyframes botCenter {
-      0%   {  opacity: 0;    }
-      40%  {  opacity: 0.3;  }
-      100% {  opacity: 1;    }
-    }
-
-    @-webkit-keyframes botCenter {
-      0%   {  opacity: 0;    }
-      40%  {  opacity: 0.3;  }
-      100% {  opacity: 1;    }
-    }
-
-    @-moz-keyframes botCenter {
-      0%   {  opacity: 0;    }
-      40%  {  opacity: 0.3;  }
-      100% {  opacity: 1;    }
-    }
-
-    @-ms-keyframes botCenter {
-      0%   {  opacity: 0;    }
-      40%  {  opacity: 0.3;  }
-      100% {  opacity: 1;    }
-    }
-
-    @-o-keyframes botCenter {
-      0%   {  opacity: 0;    }
-      40%  {  opacity: 0.3;  }
-      100% {  opacity: 1;    }
-    }
-  </style>
+	<meta charset="UTF-8">
+    <title>去往-下一个宇宙</title>
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/index.js"></script>
+    <script src="assets/travelling.js"></script>
 </head>
-
 <body>
-  <div class="blink">
-     <a href="https://github.com/hilllei/goto/" target="_blank" title="">欢迎回来，正在<b>&nbsp;开往&nbsp;</b>下一个宇宙…<br />Welcome back, travelling to the next universe…</a>
-  </div>
-  <div class="botCenter">
-    ↩️ Tips: <b>后退</b>网页可再次去往<br />
-  </div>
+	<canvas id="c"></canvas>
+	<div class="content">
+	  	<h2>给时光以生命，给岁月以文明。</h2>
+	  	<a class="btn" href="https://hilllei.github.io/goto/">
+          <svg width="64" t="1680437969440" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4046" width="200" height="200"><path fill="#fff"  d="M512 85.333333l181.034667 181.034667-60.373334 60.330667L512 205.994667 391.338667 326.698667 330.965333 266.368 512 85.333333zM85.333333 512l181.034667-181.034667 60.330667 60.373334L205.994667 512l120.704 120.661333-60.330667 60.373334L85.333333 512z m853.333334 0l-181.034667 181.034667-60.330667-60.373334L818.005333 512l-120.704-120.661333 60.330667-60.373334L938.666667 512z m-426.666667 85.333333a85.333333 85.333333 0 1 1 0-170.666666 85.333333 85.333333 0 0 1 0 170.666666z m0 341.333334l-181.034667-181.034667 60.373334-60.330667L512 818.005333l120.661333-120.704 60.373334 60.330667L512 938.666667z" p-id="4047"></path></svg>
+	  		Go to Github</a>
+  	</div>
+
   <script>
-    window.setTimeout(travelling, 10);
+    window.setTimeout(travelling, 3000);
   </script>
+
+    <script src="assets/index.js"></script>
+    <script src="assets/travelling.js"></script>
 
 </body>
 </html>
